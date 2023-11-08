@@ -6,6 +6,12 @@ export default function App() {
       <h1>App:</h1>
       <Gallery />
       <TodoList />
+      <Avatar
+        size={100}
+        person={{
+          name: "Katsuko Saruhashi",
+        }}
+      />
       {/* <Profile /> */}
     </div>
   );
@@ -26,5 +32,17 @@ function TodoList() {
         <li>Improve the spectrum technology</li>
       </ul>
     </>
+  );
+}
+
+function Avatar({ person, size }) {
+  return (
+    <img
+      className="avatar"
+      src="https://i.imgur.com/yXOvdOSs.jpg"
+      alt={person.name}
+      width={size}
+      height={size}
+    />
   );
 }
